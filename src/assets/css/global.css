@@ -12,3 +12,91 @@ h1{
     color: blue;
     font-size: 28px;
 }
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:60px;
+    
+  }
+  
+  .card {
+    background-color: #1a2a3a;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 15px;
+  }
+  
+  input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background: #fff;
+  }
+  
+  label {
+    color: white;
+    font-weight: 500;
+  }
+  
+  .forgot-pass {
+    margin-bottom: 10px;
+    text-align: right;
+    cursor: pointer;
+    color: #4a90e2;
+    font-size: 14px;
+  }
+  
+  .forgot-pass:hover {
+    text-decoration: underline;
+  }
+  
+  .btn {
+    margin-top: 10px;
+  }
+  
+  .btn-primary {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4a90e2;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #357abd;
+  }
+  
+  .dont-account {
+    text-align: center;
+    color: #ccc;
+    font-size: 14px;
+    padding-top: 15px;
+  }
+  
+  .link {
+    color: #4a90e2;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
