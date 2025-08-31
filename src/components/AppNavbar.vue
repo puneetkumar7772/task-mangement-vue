@@ -15,10 +15,10 @@ export default {
   name: 'AppNavbar',
   methods: {
     goToLogin() {
-      this.$router.push('/login');
+      this.$router.push('/');
     },
     goToSignup() {
-      this.$router.push('/signup');
+      this.$router.push('/register');
     }
   }
 }

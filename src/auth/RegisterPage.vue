@@ -22,7 +22,7 @@
           <button class="btn-primary">Register</button>
         </div>
         <span class="dont-account">
-          Already have an account? <span class="link">Login</span>
+          Already have an account? <router-link to="/" class="link">Login</router-link>
         </span>
       </div>
     </div>
