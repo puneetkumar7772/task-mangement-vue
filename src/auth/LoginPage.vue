@@ -15,7 +15,7 @@
           <button class="btn-primary">Login</button>
         </div>
         <span class="dont-account">
-          Don't have an account? <span class="link">Register</span>
+          Don't have an account?<router-link to="/register" class="link">Register</router-link>
         </span>
       </div>
     </div>
