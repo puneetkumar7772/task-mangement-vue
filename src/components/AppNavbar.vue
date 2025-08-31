@@ -64,8 +64,7 @@ export default {
   background-color: #0056b3;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 440px) {
   .navbar-container {
     flex-direction: column;
     align-items: flex-start;
