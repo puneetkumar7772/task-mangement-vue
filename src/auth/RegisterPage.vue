@@ -4,22 +4,22 @@
       <div class="login-container">
         <div class="input-field">
           <label>Name</label>
-          <input type="text" placeholder="Enter your name" />
+          <input type="text" placeholder="Enter your name" v-model="registerdata.name" />
         </div>
         <div class="input-field">
           <label>Email</label>
-          <input type="email" placeholder="Enter your email" />
+          <input type="email" placeholder="Enter your email" v-model="registerdata.email" />
         </div>
         <div class="input-field">
           <label>Password</label>
-          <input type="password" placeholder="Enter your password" />
+          <input type="password" placeholder="Enter your password" v-model="registerdata.password" />
         </div>
         <div class="input-field">
           <label>Confirm Password</label>
-          <input type="password" placeholder="Enter your confirm password" />
+          <input type="password" placeholder="Enter your confirm password" v-model="registerdata.confirmPassword" />
         </div>
         <div class="btn">
-          <button class="btn-primary">Register</button>
+          <button class="btn-primary" @click="registerData">Register</button>
         </div>
         <span class="dont-account">
           Already have an account? <router-link to="/" class="link">Login</router-link>
@@ -33,5 +33,20 @@
 <script>
 export default {
   name: "RegisterPage",
+  data(){
+    return {
+    registerdata:{
+        name:"",
+        email:"",
+        password:"",
+        confirmPassword:"",
+    }
+   }
+  },
+  methods:{
+    registerData(){
+        console.log(this.registerdata,"register data==========")
+    }
+  }
 };
 </script>
