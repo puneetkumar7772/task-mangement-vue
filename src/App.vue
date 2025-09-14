@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <AppNavbar />
+    <!-- <AppNavbar /> -->
     <div class="content-area">
       <router-view></router-view>
     </div>
@@ -8,12 +8,12 @@
 </template>
 
 <script>
-import AppNavbar from './components/AppNavbar.vue'
+// import AppNavbar from './components/AppNavbar.vue'
 
 export default {
   name: 'App',
   components: {
-    AppNavbar
+    // AppNavbar
   }
 }
 </script>
@@ -27,7 +27,9 @@ export default {
 
 .content-area {
   flex-grow: 1;
-   background-color: #2c3e50;
+  background-color: #2c3e50;
   padding: 20px;
+  margin: 0;
+  padding: 0;
 }
 </style>

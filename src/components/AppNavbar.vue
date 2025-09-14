@@ -3,8 +3,15 @@
     <div class="navbar-container">
       <h1 class="logo">Task Management</h1>
       <div class="navbar-links">
-        <button class="btn" @click="goToLogin">Login</button>
-        <button class="btn" @click="goToSignup">Register</button>
+        <!-- Loop through navItems -->
+        <router-link 
+          v-for="(item, index) in navItems" 
+          :key="index" 
+          :to="item.path" 
+          class="btn"
+        >
+          {{ item.name }}
+        </router-link>
       </div>
     </div>
   </div>
@@ -13,22 +20,24 @@
 <script>
 export default {
   name: 'AppNavbar',
-  methods: {
-    goToLogin() {
-      this.$router.push('/');
-    },
-    goToSignup() {
-      this.$router.push('/register');
-    }
+  data() {
+    return {
+      navItems: [
+        { name: "All task List", path: "/tasks" },
+        { name: "Task List", path: "/tasks" },
+        { name: "Completed Task", path: "/tasks/completed" },
+        { name: "Pending Task", path: "/tasks/pending" }
+      ]
+    };
   }
-}
+};
 </script>
 
 <style scoped>
 .navbar {
   background-color: #1a2a3a;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -50,17 +59,22 @@ export default {
 }
 
 .btn {
-  background-color: #007BFF;
+  /* background-color: #007BFF; */
   color: white;
-  padding: 10px 20px;
+  padding: 8px 14px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
+  text-decoration: none;
   transition: background-color 0.3s;
 }
 
 .btn:hover {
+  background-color: #0056b3;
+}
+
+.router-link-active {
   background-color: #0056b3;
 }
 
@@ -74,6 +88,7 @@ export default {
     margin-top: 10px;
     width: 100%;
     justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .btn {
