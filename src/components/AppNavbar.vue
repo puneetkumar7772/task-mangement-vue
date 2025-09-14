@@ -4,7 +4,7 @@
       <h1 class="logo">Task Management</h1>
       <div class="navbar-links">
         <button class="btn" @click="goToLogin">Login</button>
-        <button class="btn" @click="goToSignup">Signup</button>
+        <button class="btn" @click="goToSignup">Register</button>
       </div>
     </div>
   </div>
